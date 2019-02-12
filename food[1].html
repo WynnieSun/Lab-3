@@ -1,0 +1,43 @@
+<html>
+<title>Island Escape!</title>
+<head>
+<h1>Island Escape!</h1>
+</head>
+<br  />
+<body>
+<h2>Instructions:</h2>
+<p>Congrats! Help is on its way to you location, but you are stranded for a couple of days.
+  Choose a food source to keep you going!</p>
+<ul>
+  <li onclick="fishClick()">Fish
+    <img src="pufferFish.jpg" title="Wow! How tasty looking!" alt="fish" width="245" hieght="165"/>
+  </li>
+  <li onclick="swClick()">Seaweed
+    <img src="seaweed.jpg" title="Eww, so gross!" alt="seaweed" width="245" hieght="165"/>
+  </li>
+  <li onclick="berriesClick()">Berries
+    <img src="berries.jpg" title="So colorful!" alt="berries" width="245" hieght="165"/>
+  </li>
+</ul>
+<p class="display" id="message"><p>
+<script>
+  function fishClick()
+  {
+    var message = document.getElementById("message")
+    message.innerText = "This fish is poisonous, try another food source!"
+  }
+  function swClick()
+  {
+    var message = document.getElementById("message")
+    message.innerHTML = '<p>Great Choice! Seaweed is a excellent source of vitamins and minerals! <a href="islandEscape.html">  Next Step!</a></p>'
+  }
+  function berriesClick()
+  {
+    var message = document.getElementById("message")
+    message.innerText = "These berries are poisonous, try again."
+  }
+</script>
+<style>
+  p.display {font-size: 200%;}
+</style>
+</html>

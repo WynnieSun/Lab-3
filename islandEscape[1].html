@@ -1,0 +1,33 @@
+<html>
+<title>Escape Island</title>
+<head>
+<h1>Island Escape!</h1>
+</head>
+<br  />
+<h1>Instructions:</h1>
+<p>Congrats again!  You have managed to survive a full week on the island.  A boat appears in the distance.</p>
+<h3 onclick="winGame()">Click here to signal the boat!</h3>
+<img onclick="winGame()"src="smokeSignal.jpg" title="Light the Signal!" width="400" hieght="250"/>
+<br  />
+<br  />
+<button onClick="boat()" type="button" id="escapeButton"  disabled= true> Escape the Island!</button>
+<br  />
+<br  />
+<img id="rescueBoat" width="400" hieght="250"/>
+<br  />
+<h2 id="endGame"></h2>
+<script>
+  var winGame = function()
+  {
+    var escapeButton = document.getElementById("escapeButton");
+    escapeButton.removeAttribute("disabled");
+  }
+  var boat = function()
+  {
+    var rescueBoat = document.getElementById("rescueBoat");
+    var endGame = document.getElementById("endGame")
+    rescueBoat.src = "rescueBoat.jpg"
+    endGame.innerHTML = '<p>Congrats Game Over!! You Survived! <a href="findCoord.html"> Click here to play again</a>;</p>'
+  }
+</script>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<title>Island Escape!</title>
+<head>
+<h1>Island Escape!</h1>
+</head>
+<br  />
+<body>
+<h2>Instructions:</h2>
+<p>You awake to find yourself in a plane crash.  The impact from the crash has erased all of your memories of where you were going.
+  <br  />Follow the steps below to unlock the button and escape the island!</p>
+<br  />
+<h3>Find your Location:</h3>
+<p>You GPS tells you your coordinates are: 13.2693° S, 163.1114° W, where are you?</p>
+<form>
+<select name="location" id = "location">
+    <option value = "treasureIsland">Treasure Island</option>
+    <option value = "Agrigan">Agrigan</option>
+    <option value = "Suwarrow">Suwarrow</option>
+    <option value = "pittiIsland">Pitti Island</option>
+</select>
+</form>
+<button onclick="stepOne()" type="button" id="radioButton"> Radio Location!</button>
+<p id="status"></p>
+</body>
+<script>
+  function stepOne()
+    {
+      var radioButton = document.getElementById("radioButton").value;
+      var radioLoc = document.getElementById("location").value;
+      var status = document.getElementById("status");
+
+      if (radioLoc == "Suwarrow")
+      {
+        status.innerHTML = '<a href = "food.html">Next Step</a>'
+      }
+      else
+      {
+        status.innerText = "Keep trying!"
+      }
+    }
+</script>
+</html>
